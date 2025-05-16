@@ -1,0 +1,24 @@
+{
+  "name": "scm-critical-thinking-project",
+  "version": "1.0.0",
+  "description": "A Centralized Version Control System (CVCS), such as Subversion (SVN), operates using a single central repository that all developers connect to. This central server holds the main project history, and developers must be connected to it to perform most version control tasks. In contrast, a Distributed Version Control System (DVCS), like Git or Mercurial, allows each developer to have a complete copy of the entire repository — including full history — on their local machine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Running tests...\" && exit 0",
+    "lint": "eslint ."
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigOronaa/SCM-Critical-Thinking-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigOronaa/SCM-Critical-Thinking-Project/issues"
+  },
+  "homepage": "https://github.com/BigOronaa/SCM-Critical-Thinking-Project#readme"
+}
