@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-test:
+  lint-test-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,3 +27,7 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+      - name: Deploy to staging
+        if: success()
+        run: echo "✅ Code passed checks. Deploying to staging..."
