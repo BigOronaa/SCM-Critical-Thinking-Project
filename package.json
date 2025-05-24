@@ -4,8 +4,8 @@
   "description": "A project comparing CVCS and DVCS with Git workflows.",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest",
-    "lint": "eslint ."
+    "test": "jest",
+    "lint": "npx eslint ."
   },
   "repository": {
     "type": "git",

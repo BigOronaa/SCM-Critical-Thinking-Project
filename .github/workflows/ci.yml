@@ -2,27 +2,32 @@ name: CI Pipeline
 
 on:
   push:
-    branches:
-      - '**'  # Run on push to any branch
+    branches: [ main, ci-setup, ci/integration-tests ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
+  lint-test-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run tests
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Tests
         run: npm test
 
-      - name: Run lint check
-        run: npm run lint
+      - name: Deploy to staging
+        if: success()
+        run: echo "✅ Code passed checks. Deploying to staging..."
