@@ -104,4 +104,18 @@ I confirmed on GitHub that my commits were **verified**, proving their authentic
 
 ## Change Auditing
 
-Since I enabled branch protection and signed commits, all changes are now traceable. GitHub provides commit history and comparisons, and signed commits help ensure the identity of contributors.vvv
+Since I enabled branch protection and signed commits, all changes are now traceable. GitHub provides commit history and comparisons, and signed commits help ensure the identity of contributors.
+
+
+## Summary
+
+By taking these steps:
+- I secured access through collaborator permissions.
+- I verified and managed my SSH keys.
+- I enforced structured development using branch protection rules.
+- I ensured commit authenticity using GPG-signed commits.
+- I enabled traceable auditing with verified commit history.
+
+These practices form a strong foundation for securing any Git-based workflow, especially in collaborative or distributed environments.
+
+---
